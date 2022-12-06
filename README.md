@@ -30,7 +30,7 @@ We can use the image above as a validation metric of our muscle model:  if our m
 
 ## model inputs and outputs
 
-The idea of this model is as follows:  for a given time $t$, input into the model an activation value $a(t) \in [0,1]$ and a muscle fiber length $l^M(t)$.  The model will then output the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, the time derivative of activation $\dot{a}(t + \Delta t)$ and fiber contraction velocity $\dot{l}^M(t + \Delta t)$.
+The idea of this model is as follows:  for a given time $t$, input into the model a neural excitation input $u(t)$, an activation value $a(t) \in [0,1]$ and a muscle fiber length $l^M(t)$.  The model will then output the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, the time derivative of activation $\dot{a}(t + \Delta t)$ and fiber contraction velocity $\dot{l}^M(t + \Delta t)$.
 
 ![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.05.46%20AM.png)
 
