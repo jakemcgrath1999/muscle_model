@@ -42,7 +42,7 @@ Muscle cannot generate force nor relax instantaneously: activation functions as 
 
 There exist many different differential equations that govern activation dynamics.  Here, I implement 9 different models found in the literature to see how they generate different contraction dynamics.  I created one parent class called Activation that houses the general methods that each activation model uses -- underneath this Activation class live the 9 different models of activation dynamics.
 
-*** put image of superclass and subclass here ***
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.07.12%20AM.png)
 
 # model limitations
 In this model, muscle fatigue from overuse is not included.  Fatigue is an important feature of muscle: obviously we cannot force our muscles to actuate indefinitely.  At some point, muscle will tire and perform at suboptimal standards.  Other models of muscle contraction (specifically those that implement motor-unit based models) can account for muscle fatigue, however, this feature of muscle is neglected here.  If you wish to address tiring, please [see this other repository](https://github.com/iandanforth/pymuscle/blob/master/README.md) that simulates the relationship between excitatory input and motor-unit output as well as fatigue over time.
