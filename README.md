@@ -6,7 +6,9 @@ For a deeper understanding of the problem at hand, view the uploaded powerpoint 
 
 # description
 
-This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Simulate Dynamic Contractions in Older Adults](https://doi.org/10.1115/1.1531112).  The goal is to map neural excitation to activation dynamics and then transform activation to drive muscle contraction.
+This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Simulate Dynamic Contractions in Older Adults](https://doi.org/10.1115/1.1531112).  The goal is to map neural excitation to activation dynamics and then transform activation to drive muscle contraction.  The general code structure is show below
+
+*** insert image of code structure ***
 
 ## hill model
 
@@ -30,13 +32,17 @@ We can use the image above as a validation metric of our muscle model:  if our m
 
 The idea of this model is as follows:  for a given time $t$, input into the model an activation value $a(t) \in [0,1]$ and a muscle fiber length $l^M(t)$.  The model will then output the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, the time derivative of activation $\dot{a}(t + \Delta t)$ and fiber contraction velocity $\dot{l}^M(t + \Delta t)$.
 
-input image from powerpoint showing how inputs map to outputs...
+*** input image from powerpoint showing how inputs map to outputs ***
 
 ## activation
 
-Muscle cannot generate force nor relax instantaneously: activation functions as an intermediate step between neural input and muscle contraction to account for these time delays.  Activation dynamics is a differential equation that describes the change in calcium ion concentration within the muscle.  Calcium ions singal cross-bridge formation of actin-myosin proteins which is modeled by the contraction dynamics portion of this code.  When muslde is neurally excited, activation gradually increases; whereas if excitation decreases, muscle activation gradually decreases.
+Given a neural input $u(t) \in [0,1]$ and current activation value $a(t)$, the activation models spit out the time derivation of activation $\dot{a}(t)$.
 
-There exist many different differential equations that govern activation dynamics.  Here, I implement 9 different models found in the literature to see how they generate different contraction dynamics.
+Muscle cannot generate force nor relax instantaneously: activation functions as an intermediate step between neural input and muscle contraction to account for these time delays.  Activation dynamics is a differential equation that describes the change in calcium ion concentration within the muscle.  Calcium ions singal cross-bridge formation of actin-myosin proteins which is modeled by the contraction dynamics portion of this code.  When muscle is neurally excited, activation increases rapidly; whereas if excitation decreases, muscle activation gradually decreases.  In this code, we use the timescale of activation $\tau_{act} = 10$ ms and the decactivation timescale to be $\tau_{deact} = 40$ ms.
+
+There exist many different differential equations that govern activation dynamics.  Here, I implement 9 different models found in the literature to see how they generate different contraction dynamics.  I created one parent class called Activation that houses the general methods that each activation model uses -- underneath this Activation class live the 9 different models of activation dynamics.
+
+*** put image of superclass and subclass here ***
 
 # model limitations
 In this model, muscle fatigue from overuse is not included.  Fatigue is an important feature of muscle: obviously we cannot force our muscles to actuate indefinitely.  At some point, muscle will tire and perform at suboptimal standards.  Other models of muscle contraction (specifically those that implement motor-unit based models) can account for muscle fatigue, however, this feature of muscle is neglected here.  If you wish to address tiring, please [see this other repository](https://github.com/iandanforth/pymuscle/blob/master/README.md) that simulates the relationship between excitatory input and motor-unit output as well as fatigue over time.
