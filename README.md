@@ -8,7 +8,7 @@ For a deeper understanding of the problem at hand, view the uploaded powerpoint 
 
 This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Simulate Dynamic Contractions in Older Adults](https://doi.org/10.1115/1.1531112).  The goal is to map neural excitation to activation dynamics and then transform activation to drive muscle contraction.  The general code structure is show below
 
-*** insert image of code structure ***
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.08.26%20AM.png)
 
 ## hill model
 
