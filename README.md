@@ -8,7 +8,7 @@ For a deeper understanding of the problem at hand, view the uploaded powerpoint 
 
 This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Simulate Dynamic Contractions in Older Adults](https://doi.org/10.1115/1.1531112).  The goal is to map neural excitation to activation dynamics and then transform activation to drive muscle contraction.  The general code structure is show below
 
-![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.08.26%20AM.png)
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Screenshot%202022-12-06%20at%2011.08.26%20AM.png)
 
 For a demo with how to use the provided code, please see the demo folder *** insert link here to folder ***.
 
@@ -36,7 +36,7 @@ We can use the image above as a validation metric of our muscle model:  if our m
 
 The idea of this model is as follows:  for a given time $t$, input into the model a neural excitation input $u(t) \in [0,1]$, an activation value $a(t) \in [0,1]$ and a muscle fiber length $l^M(t)$.  The model will then output the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, the time derivative of activation $\dot{a}(t + \Delta t)$ and fiber contraction velocity $\dot{l}^M(t + \Delta t)$.
 
-![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.05.46%20AM.png)
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Screenshot%202022-12-06%20at%2011.05.46%20AM.png)
 
 ## activation
 
@@ -46,7 +46,7 @@ Muscle cannot generate force nor relax instantaneously: activation functions as 
 
 There exist many different differential equations that govern activation dynamics.  Here, I implement 9 different models found in the literature to see how they generate different contraction dynamics.  I created one parent class called Activation that houses the general methods that each activation model uses -- underneath this Activation class live the 9 different models of activation dynamics.
 
-![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/Screenshot%202022-12-06%20at%2011.07.12%20AM.png)
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Screenshot%202022-12-06%20at%2011.07.12%20AM.png)
 
 # model limitations
 In this model, muscle fatigue from overuse is not included.  Fatigue is an important feature of muscle: obviously we cannot force our muscles to actuate indefinitely.  At some point, muscle will tire and perform at suboptimal standards.  Other models of muscle contraction (specifically those that implement motor-unit based models) can account for muscle fatigue, however, this feature of muscle is neglected here.  If you wish to address tiring, please [see this other repository](https://github.com/iandanforth/pymuscle/blob/master/README.md) that simulates the relationship between excitatory input and motor-unit output as well as fatigue over time.
