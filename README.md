@@ -22,7 +22,7 @@ where $F$ and $V$ are the muscle's tension and contraction velocity, $F_o$ is th
 
 $$ f = {{1 - v} \over {1 + \alpha \cdot v}} $$
 
-where $f$ and $v$ are normalized force and velocity, and $\alpha$ characterizes the degree of nonlinearity.  The other two properties of muscle that our model considers is its Force-Length properties and tendon's Force-Strain relationship.  Muscle's force-length relationship models muscle as nonlinear strings that become exponentially strong as they are stretched too far.  To see how muscle's passive elastic properties and active contractile properties play into this relationship, see [this discussion](https://www.brown.edu/Departments/Engineering/Courses/En123/MuscleExp/Length_Tension.htm).
+where $f$ and $v$ are normalized force and velocity, and the dimensionless parameter $\alpha$ characterizes the degree of nonlinearity.  The other two properties of muscle that our model considers is its Force-Length properties and tendon's Force-Strain relationship.  Muscle's force-length relationship models muscle as nonlinear strings that become exponentially strong as they are stretched too far.  To see how muscle's passive elastic properties and active contractile properties play into this relationship, see [this discussion](https://www.brown.edu/Departments/Engineering/Courses/En123/MuscleExp/Length_Tension.htm).
 
 The curves representing muscle's intrinsic properties that we will try to model as well as a schematic of the Hill model are shown below:
 
