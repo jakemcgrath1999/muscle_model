@@ -4,6 +4,10 @@ Starting from neural excitation, let's model the contractile dynamics of muscle.
 
 For a deeper understanding of the problem at hand, view the uploaded powerpoint slides.  All work in this repository is for the final project in [computation physics](https://www.wgilpin.com/cphy/) fall semester 2022 w/ Prof William Gilpin.
 
+Some useful resources:
+Markup :  * [Standford Muscle Model](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Muscle+Model+Theory+and+Publications)
+          * [Guided tour](https://simtk-confluence.stanford.edu:8443/download/attachments/2624181/CompleteDescriptionOfTheThelen2003MuscleModel.pdf?version=1&modificationDate=1319838594036&api=v2)
+          
 # description
 
 This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Simulate Dynamic Contractions in Older Adults](https://doi.org/10.1115/1.1531112).  The goal is to map neural excitation to activation dynamics and then transform activation to drive muscle contraction.  The general code structure is show below
