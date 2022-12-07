@@ -68,7 +68,7 @@ There exist many different differential equations that govern activation dynamic
 
 ## contraction dynamics
 
-The contractile dynamics portion of this model will give us the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, fiber contraction velocity $\dot{l}^M(t + \Delta t)$.
+The contractile dynamics portion of this model will give us the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, fiber contraction velocity $\dot{l}^M(t + \Delta t)$.  Please refer to the links under 'helpful resources' above to see the exact equations used (or, the equations exist in our code so check it out there too!)
 
 The muscle model consists of two main parts:  the muscle fibers and tendon.  The muscle fibers themselves have two avenues of force production:  first, the passive elements of muscle have stiffness and produce force when stretched; second, the contractile element produces force from actin-myosin interactions stimulated by activation.
 
