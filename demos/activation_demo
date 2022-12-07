@@ -1,7 +1,0 @@
-This demo will be a walkthrough of how to use the provided activation code.  First let's load the necessary libraries 
-'import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import odeint, solve_ivp
-import random
-'
-then we do some other stuff
