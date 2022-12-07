@@ -4,9 +4,11 @@ Starting from neural excitation, let's model the contractile dynamics of muscle.
 
 For a deeper understanding of the problem at hand, view the uploaded powerpoint slides.  All work in this repository is for the final project in [computation physics](https://www.wgilpin.com/cphy/) fall semester 2022 w/ Prof William Gilpin.
 
-Some useful resources:
-Markup :  * [Standford Muscle Model](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Muscle+Model+Theory+and+Publications)
-          * [Guided tour](https://simtk-confluence.stanford.edu:8443/download/attachments/2624181/CompleteDescriptionOfTheThelen2003MuscleModel.pdf?version=1&modificationDate=1319838594036&api=v2)
+Some helpful resources:
+* [Standford muscle model](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Muscle+Model+Theory+and+Publications)
+* [A kinematic model of the muscular contraction](https://hrcak.srce.hr/file/114131)
+* [Good summary of muscle contraction](https://www.nature.com/scitable/topicpage/the-sliding-filament-theory-of-muscle-contraction-14567666/)
+* [Guided tour](https://simtk-confluence.stanford.edu:8443/download/attachments/2624181/CompleteDescriptionOfTheThelen2003MuscleModel.pdf?version=1&modificationDate=1319838594036&api=v2)
           
 # description
 
