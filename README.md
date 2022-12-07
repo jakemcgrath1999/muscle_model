@@ -16,7 +16,7 @@ This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Si
 
 ![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Screenshot%202022-12-06%20at%2011.08.26%20AM.png)
 
-For a demo with how to use the provided code, please see the demo folder *** insert link here to folder ***.
+For a demo with how to use the provided code, please see the demo folder.  Here is a link to [activation demos](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/activation_demo.ipynb) and here is a link to contraction dynamics demos.
 
 ## model inputs and outputs
 
@@ -58,7 +58,7 @@ We can use the image above as a validation metric of our muscle model:  if our m
 
 ## activation
 
-Given a neural input $u(t) \in [0,1]$ and current activation value $a(t)$, the activation models spit out the time derivation of activation $\dot{a}(t)$.
+Given a neural input $u(t) \in [0,1]$ and current activation value $a(t)$, the activation models spit out the time derivation of activation $\dot{a}(t)$.  [Click here](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/activation_demo.ipynb) for a demo.
 
 Muscle cannot generate force nor relax instantaneously: activation functions as an intermediate step between neural input and muscle contraction to account for these time delays.  Activation dynamics is a differential equation that describes the change in calcium ion concentration within the muscle.  Calcium ions singal cross-bridge formation of actin-myosin proteins which is modeled by the contraction dynamics portion of this code.  When muscle is neurally excited, activation increases rapidly; whereas if excitation decreases, muscle activation gradually decreases.  In this code, we use the timescale of activation $\tau_{act} = 10$ ms and the decactivation timescale to be $\tau_{deact} = 40$ ms.
 
