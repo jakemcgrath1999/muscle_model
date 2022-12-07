@@ -14,7 +14,11 @@ For a demo with how to use the provided code, please see the demo folder *** ins
 
 ## hill model
 
-The model implemented here follows the commonly-used Hill model of muscle and accurately represents three intrinsic properties of muscle (muscle's force-length, force-velocity, and tendon's force-strain relationships).  The Hill model is commonly depicted as a muscle unit in series with a passive tendon unit (shown in the figure below).  The muscle unit consists of two parallel components:  a passive element that models the behavior of connective tissue and a contralie element which simulates the dynamics of actin-myosin interactions.  The series tendon unit is represented by a nonlinear spring that captures the elastic properties of the tendon.  The Hill muscle model gives the nonlinear relationship between muscle tension and contraction velocity as
+The model implemented here follows the commonly-used Hill model of muscle and accurately represents three intrinsic properties of muscle (muscle's force-length, force-velocity, and tendon's force-strain relationships).  The Hill model is commonly depicted as a muscle unit in series with a passive tendon unit.  The muscle unit consists of two parallel components:  a passive element that models the behavior of connective tissue and a contralie element which simulates the dynamics of actin-myosin interactions.  The series tendon unit is represented by a nonlinear spring that captures the elastic properties of the tendon.
+
+![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Hill-muscle-model-comprising-the-contractile-element-CE-whose-length-is-indicated-as.png)
+
+The Hill muscle model gives the nonlinear relationship between muscle tension and contraction velocity as
 
 $$ {(V+b)} \cdot {(F+a)} = {b \cdot (F_o+a)} $$
 
