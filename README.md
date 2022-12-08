@@ -16,7 +16,7 @@ This model is inspired by [Adjustment of Muscle Mechanics Model Parameters to Si
 
 ![alt text](https://github.com/jakemcgrath1999/muscle_model/blob/main/extras/Screenshot%202022-12-06%20at%2011.08.26%20AM.png)
 
-For a demo with how to use the provided code, please see the demo folder.  Here is a link to [activation demos](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/activation_demo.ipynb) and here is a link to [contraction dynamics demos](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/contraction_demo.ipynb).
+For a demo with how to use the provided code, please see the demo folder.  Here is a link to [activation demos](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/activation_demo.ipynb) and here is a link to [contraction dynamics demos](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/contraction_demo%20(1).ipynb).
 
 FYI, the activation demo is fully built out, however, the contraction dynamics demo has a bug in it.
 
@@ -70,7 +70,7 @@ There exist many different differential equations that govern activation dynamic
 
 ## contraction dynamics
 
-The contractile dynamics portion of this model will give us the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, fiber contraction velocity $\dot{l}^M(t + \Delta t)$.  Please refer to the links under 'helpful resources' above to see the exact equations used (or, the equations exist in our code so check it out there too!).  Here is a [demo](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/contraction_demo.ipynb) that illustrates how the contraction dynamics code runs.
+The contractile dynamics portion of this model will give us the entire actuator's force $F^{MT}(t)$ and, at the next timestep $t + \Delta t$, fiber contraction velocity $\dot{l}^M(t + \Delta t)$.  Please refer to the links under 'helpful resources' above to see the exact equations used (or, the equations exist in our code so check it out there too!).  Here is a [demo](https://github.com/jakemcgrath1999/muscle_model/blob/main/demos/contraction_demo%20(1).ipynb) that illustrates how the contraction dynamics code runs.
 
 The muscle model consists of two main parts:  the muscle fibers and tendon.  The muscle fibers themselves have two avenues of force production:  first, the passive elements of muscle have stiffness and produce force when stretched; second, the contractile element produces force from actin-myosin interactions stimulated by activation.
 
